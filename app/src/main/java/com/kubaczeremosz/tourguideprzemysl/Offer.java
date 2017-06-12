@@ -9,13 +9,13 @@ public class Offer {
     private String name;
     private String text;
     private int imageResourceId;
-    private String link;
+    private String cords;
 
-    public Offer(String name, String text, int imageResource, String link) {
+    public Offer(String name, String text, int imageResource, String cords) {
         this.name = name;
         this.text = text;
         this.imageResourceId = imageResource;
-        this.link = link;
+        this.cords = cords;
     }
 
     public String getName() {
@@ -30,7 +30,7 @@ public class Offer {
         return imageResourceId;
     }
 
-    public String getLink() {
-        return link;
+    public String getCords() {
+        return cords;
     }
 }

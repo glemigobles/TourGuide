@@ -1,7 +1,8 @@
 package com.kubaczeremosz.tourguideprzemysl;
 
-import android.app.LauncherActivity;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +18,6 @@ import java.util.List;
 
 public class OfferAdapter extends ArrayAdapter<Offer> {
 
-    private int listposition=0;
 
     public OfferAdapter(Context context, List<Offer> listaGraczy) {
         super(context, 0, listaGraczy);
@@ -31,10 +31,9 @@ public class OfferAdapter extends ArrayAdapter<Offer> {
         if(listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
-            listposition++;
         }
 
-        Offer currentOffer = getItem(position);
+        final Offer currentOffer = getItem(position);
         TextView offerNameTextView = (TextView) listItemView.findViewById(R.id.list_offer_name);
         offerNameTextView.setText(currentOffer.getName());
 
@@ -44,8 +43,21 @@ public class OfferAdapter extends ArrayAdapter<Offer> {
         ImageView imageView = (ImageView) listItemView.findViewById(R.id.list_offer_icon);
         imageView.setImageResource(currentOffer.getImageResourceId());
 
-        LauncherActivity.ListItem item = (LauncherActivity.ListItem) listItemView.findViewById(R.id.item);
+        ViewGroup item =(ViewGroup) listItemView.findViewById(R.id.item);
 
+        item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navigate(currentOffer);
+            }
+        });
         return listItemView;
+    }
+
+    public void navigate(Offer offer){
+        Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                Uri.parse("geo:"+offer.getCords()+" (" +offer.getName()+ ")"));
+        getContext().startActivity(intent);
+
     }
 }
