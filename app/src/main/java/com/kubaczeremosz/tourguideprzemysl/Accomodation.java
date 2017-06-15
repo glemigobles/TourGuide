@@ -22,8 +22,8 @@ public class Accomodation extends Fragment {
 
         ArrayList<Offer> listAccommodation = new ArrayList<>();
         listAccommodation.add(new Offer("Hotel Villa Bolestraszyce", "Charming place located 6km from Przemyśl",R.drawable.vb,"49.8154662,22.8491607"));
-        listAccommodation.add(new Offer("Zamek dubiecko", "Old Polish Aristocracy Palace located 29km from Przemyśl",R.drawable.zd,"49.8218965,22.3917756"));
-        listAccommodation.add(new Offer("Hotel Krasiczyn", "Old Polish Aristocracy Palace located 29km from Przemyśl",R.drawable.krasiczyn,"49.776357, 22.649975"));
+        listAccommodation.add(new Offer("Zamek dubiecko", "Old Polish Aristocracy Castle located 29km from Przemyśl",R.drawable.zd,"49.8218965,22.3917756"));
+        listAccommodation.add(new Offer("Hotel Krasiczyn", "*** Hotel in old Palace",R.drawable.krasiczyn,"49.776357, 22.649975"));
 
 
         OfferAdapter offerAdapter=new OfferAdapter(getContext(), listAccommodation);

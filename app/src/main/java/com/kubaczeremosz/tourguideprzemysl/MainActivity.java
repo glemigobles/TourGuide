@@ -43,16 +43,18 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
+
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
-        // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+        tabLayout.getTabAt(0).setIcon(R.drawable.luggage);
+        tabLayout.getTabAt(1).setIcon(R.drawable.cutlery);
+        tabLayout.getTabAt(2).setIcon(R.drawable.artist);
+        tabLayout.getTabAt(3).setIcon(R.drawable.photocamera);
     }
 
 
@@ -114,19 +116,19 @@ public class MainActivity extends AppCompatActivity {
             return 4;
         }
 
-        @Override
-        public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return "Accommodation";
-                case 1:
-                    return "Food/Drinks";
-                case 2:
-                    return "Culture";
-                case 3:
-                    return "History";
-            }
-            return null;
-        }
+//        @Override
+//        public CharSequence getPageTitle(int position) {
+//            switch (position) {
+//                case 0:
+//                    return "Accommodation";
+//                case 1:
+//                    return "Food/Drinks";
+//                case 2:
+//                    return "Culture";
+//                case 3:
+//                    return "History";
+//            }
+//            return null;
+//        }
     }
 }
