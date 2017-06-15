@@ -18,6 +18,12 @@ public class Offer {
         this.cords = cords;
     }
 
+    public Offer(String name, int imageResourceId, String cords) {
+        this.name = name;
+        this.imageResourceId = imageResourceId;
+        this.cords = cords;
+    }
+
     public String getName() {
         return name;
     }

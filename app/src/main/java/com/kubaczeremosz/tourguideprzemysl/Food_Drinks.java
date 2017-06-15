@@ -19,11 +19,15 @@ public class Food_Drinks extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.food_drinks, container, false);
 
-        ArrayList<Offer> listAccommodation = new ArrayList<>();
-        listAccommodation.add(new Offer("Fredreum Theatre", "Small theatre located in Przemyśl Casimir Castle ",R.drawable.fredreum,"Teatr Fredreum"));
-        listAccommodation.add(new Offer("National Museum of Przemysl", "The National Museum of the Przemyśl Land includes several branches. Its collections amount to more than 200 thousands exhibits from the area of archaeology, history, numismatics, art, ethnography and nature, more than 3,300 deposits and various auxiliary materials. ",R.drawable.muzeum1,"Muzeum Narodowe Ziemi Przemyskliej"));
+        ArrayList<Offer> listRestaurants = new ArrayList<>();
+        listRestaurants.add(new Offer("Bosko",R.drawable.bosko,"49.7830998,22.7752845,17"));
+        listRestaurants.add(new Offer("Hotel Krasiczyn",R.drawable.krasiczyn,"49.776357, 22.649975"));
+        listRestaurants.add(new Offer("Hotel Villa Bolestraszyce",R.drawable.vb,"49.8154662,22.8491607,17"));
+        listRestaurants.add(new Offer("Monarchia",R.drawable.monarchia,"49.778489, 22.783430"));
+        listRestaurants.add(new Offer("Na górce",R.drawable.nagorce,"49.806883, 22.763987"));
+        listRestaurants.add(new Offer("Zamek dubiecko",R.drawable.zd,"49.8218965,22.3917756,17"));
 
-        OfferAdapter offerAdapter=new OfferAdapter(getContext(), listAccommodation);
+        OfferAdapter offerAdapter=new OfferAdapter(getContext(), listRestaurants);
         ListView listView = (ListView) rootView.findViewById(R.id.listview_food_drinks);
         listView.setAdapter(offerAdapter);
         return rootView;

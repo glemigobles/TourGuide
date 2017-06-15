@@ -19,11 +19,11 @@ public class History extends Fragment{
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.history, container, false);
 
-        ArrayList<Offer> listAccommodation = new ArrayList<>();
-        listAccommodation.add(new Offer("Fredreum Theatre", "Small theatre located in Przemyśl Casimir Castle ",R.drawable.fredreum,"Teatr Fredreum"));
-        listAccommodation.add(new Offer("National Museum of Przemysl", "The National Museum of the Przemyśl Land includes several branches. Its collections amount to more than 200 thousands exhibits from the area of archaeology, history, numismatics, art, ethnography and nature, more than 3,300 deposits and various auxiliary materials. ",R.drawable.muzeum1,"Muzeum Narodowe Ziemi Przemyskliej"));
+        ArrayList<Offer> listSightseeing = new ArrayList<>();
+        listSightseeing.add(new Offer("Fredreum Theatre",R.drawable.fredreum,"49.780361, 22.765993"));
+        listSightseeing.add(new Offer("Fredreum Theatre",R.drawable.fredreum,"49.780361, 22.765993"));
 
-        OfferAdapter offerAdapter=new OfferAdapter(getContext(), listAccommodation);
+        OfferAdapter offerAdapter=new OfferAdapter(getContext(), listSightseeing);
         ListView listView = (ListView) rootView.findViewById(R.id.listview_history);
         listView.setAdapter(offerAdapter);
         return rootView;
