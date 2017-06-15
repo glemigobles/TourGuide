@@ -1,9 +1,5 @@
 package com.kubaczeremosz.tourguideprzemysl;
 
-/**
- * Created by Kuba on 2017-06-10.
- */
-
 import android.support.v4.app.Fragment;
 import android.view.View;
 import android.view.ViewGroup;
