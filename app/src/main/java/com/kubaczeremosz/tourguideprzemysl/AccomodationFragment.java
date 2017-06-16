@@ -17,9 +17,9 @@ public class AccomodationFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.accommodation, container, false);
 
         ArrayList<Offer> listAccommodation = new ArrayList<>();
-        listAccommodation.add(new Offer("Hotel Villa Bolestraszyce", getString(R.string.vbtext),R.drawable.vb,"49.8154662,22.8491607"));
-        listAccommodation.add(new Offer("Zamek dubiecko", getString(R.string.zdtext),R.drawable.zd,"49.8218965,22.3917756"));
-        listAccommodation.add(new Offer("Hotel Krasiczyn", getString(R.string.hktext),R.drawable.krasiczyn,"49.776357, 22.649975"));
+        listAccommodation.add(new Offer(getString(R.string.vbtitle), getString(R.string.vbtext),R.drawable.vb,"49.8154662,22.8491607"));
+        listAccommodation.add(new Offer(getString(R.string.zdtitle), getString(R.string.zdtext),R.drawable.zd,"49.8218965,22.3917756"));
+        listAccommodation.add(new Offer(getString(R.string.hktitle), getString(R.string.hktext),R.drawable.krasiczyn,"49.776357, 22.649975"));
 
 
         OfferAdapter offerAdapter=new OfferAdapter(getContext(), listAccommodation);

@@ -34,4 +34,10 @@
     <string name="vbtext">Charming place located 6km from Przemyśl</string>
     <string name="zdtext">Old Polish Aristocracy Castle located 29km from Przemyśl</string>
     <string name="hktext">*** Hotel in old Palace</string>
+    <string name="vbtitle">Hotel Villa Bolestraszyce</string>
+    <string name="zdtitle">Zamek dubiecko</string>
+    <string name="hktitle">Hotel Krasiczyn</string>
+    <string name="boskotitle">Bosko</string>
+    <string name="monarchiatitle">Monarchia</string>
+    <string name="nagorcetitle">Na górce</string>
 </resources>
