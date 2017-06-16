@@ -28,9 +28,7 @@ public class Offer {
         return name;
     }
 
-    public String getText() {
-        return text;
-    }
+    public String getText() { return text; }
 
     public int getImageResourceId() {
         return imageResourceId;
