@@ -81,17 +81,17 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position){
                 case 0:
-                    Accomodation tabAccomodation = new Accomodation();
-                    return tabAccomodation;
+                    AccomodationFragment tabAccomodationFragment = new AccomodationFragment();
+                    return tabAccomodationFragment;
                 case 1:
-                    FoodDrinks tabFoood_Drinks = new FoodDrinks();
+                    FoodDrinksFragment tabFoood_Drinks = new FoodDrinksFragment();
                     return tabFoood_Drinks;
                 case 2:
-                    Culture tabCulture = new Culture();
-                    return tabCulture;
+                    CultureFragment tabCultureFragment = new CultureFragment();
+                    return tabCultureFragment;
                 case 3:
-                    History tabHistory = new History();
-                    return tabHistory;
+                    HistoryFragment tabHistoryFragment = new HistoryFragment();
+                    return tabHistoryFragment;
                 default:
                     return null;
             }

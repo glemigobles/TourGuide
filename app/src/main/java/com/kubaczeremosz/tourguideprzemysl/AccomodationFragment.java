@@ -9,7 +9,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class Accomodation extends Fragment {
+public class AccomodationFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

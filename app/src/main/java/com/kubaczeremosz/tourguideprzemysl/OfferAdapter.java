@@ -12,9 +12,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-/**
- * Created by Kuba on 2017-03-28.
- */
 
 public class OfferAdapter extends ArrayAdapter<Offer> {
 
@@ -27,23 +24,22 @@ public class OfferAdapter extends ArrayAdapter<Offer> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // Check if the existing view is being reused, otherwise inflate the view
-        View listItemView = convertView;
-        if(listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(
+        if(convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
 
         final Offer currentOffer = getItem(position);
-        TextView offerNameTextView = (TextView) listItemView.findViewById(R.id.list_offer_name);
+        TextView offerNameTextView = (TextView) convertView.findViewById(R.id.list_offer_name);
         offerNameTextView.setText(currentOffer.getName());
 
-        TextView offerTextView = (TextView) listItemView.findViewById(R.id.list_offer_text);
+        TextView offerTextView = (TextView) convertView.findViewById(R.id.list_offer_text);
         offerTextView.setText(currentOffer.getText());
 
-        ImageView imageView = (ImageView) listItemView.findViewById(R.id.list_offer_icon);
+        ImageView imageView = (ImageView) convertView.findViewById(R.id.list_offer_icon);
         imageView.setImageResource(currentOffer.getImageResourceId());
 
-        ViewGroup item =(ViewGroup) listItemView.findViewById(R.id.item);
+        ViewGroup item =(ViewGroup) convertView.findViewById(R.id.item);
 
         item.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +47,7 @@ public class OfferAdapter extends ArrayAdapter<Offer> {
                 navigate(currentOffer);
             }
         });
-        return listItemView;
+        return convertView;
     }
 
     public void navigate(Offer offer){

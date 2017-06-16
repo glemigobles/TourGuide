@@ -9,7 +9,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class History extends Fragment{
+public class HistoryFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

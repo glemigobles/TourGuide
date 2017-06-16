@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * Created by Kuba on 2017-06-10.
  */
 
-public class FoodDrinks extends Fragment {
+public class FoodDrinksFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

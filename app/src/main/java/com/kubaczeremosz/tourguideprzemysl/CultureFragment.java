@@ -10,7 +10,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 
-public class Culture extends Fragment{
+public class CultureFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
